@@ -24,6 +24,12 @@ jobs:
     - os: osx
       node_js:
         - 12
+    - os: windows
+      node_js
+        - 10
+    - os: windows
+      node_js:
+        - 12
 branches:
   except:
   - /^v[0-9]/
