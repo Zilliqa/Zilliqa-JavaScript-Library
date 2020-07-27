@@ -25,15 +25,11 @@ jobs:
       node_js:
         - 12
     - os: windows
-      node_js:
-        - 10
-      before_install:
-        - npm config set msvs_version 2015
+      language: node_js
+      node_js: 10
     - os: windows
-      node_js:
-        - 12
-      before_install:
-        - npm config set msvs_version 2015
+      language: node_js
+      node_js: 12
 branches:
   except:
   - /^v[0-9]/
