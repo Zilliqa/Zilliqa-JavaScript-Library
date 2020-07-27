@@ -25,7 +25,7 @@ jobs:
       node_js:
         - 12
     - os: windows
-      node_js
+      node_js:
         - 10
     - os: windows
       node_js:
