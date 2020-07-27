@@ -25,11 +25,15 @@ jobs:
       node_js:
         - 12
     - os: windows
-      language: node_js
       node_js: 10
+      before_install:
+        - npm install --global --production windows_build_tools --vs2015
+        - npm config set msvs_version 2015 --global
     - os: windows
-      language: node_js
       node_js: 12
+      before_install:
+        - npm install --global --production windows-build-tools --vs2015
+        - npm config set msvs_version 2015 --global
 branches:
   except:
   - /^v[0-9]/
