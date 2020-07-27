@@ -28,12 +28,12 @@ jobs:
       node_js:
         - 10
       before_install:
-        - npm config set msvs_version 2015
+        - npm config set msvs_version 2017 --global
     - os: windows
       node_js:
         - 12
       before_install:
-        - npm config set msvs_version 2015
+        - npm config set msvs_version 2017 --global
 branches:
   except:
   - /^v[0-9]/
