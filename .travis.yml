@@ -25,7 +25,7 @@ jobs:
       node_js:
         - 12
     - os: windows
-      node_js: 10
+      node_js: "10.22a"
       before_install:
         - npm install --global --production windows-build-tools --vs2015
         - npm config set msvs_version 2015 --global
