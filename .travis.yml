@@ -25,28 +25,20 @@ jobs:
       node_js:
         - 12
     - os: windows
-      node_js: "10.18"
+      node_js: 10
       before_install:
-        - npm install -g node-addon-api@2.0.2
-        - npm list -g
-        - npm install --global --production windows-build-tools --vs2015
         - npm config set msvs_version 2015 --global
     - os: windows
       node_js: 10
       before_install:
-        - npm install --global --production windows-build-tools --vs2017
         - npm config set msvs_version 2017 --global
     - os: windows
-      node_js: "12.18.3"
+      node_js: 12
       before_install:
-        - npm install -g node-addon-api@2.0.2
-        - npm list -g
-        - npm install --global --production windows-build-tools --vs2015
         - npm config set msvs_version 2015 --global
     - os: windows
       node_js: 12
       before_install:
-        - npm install --global --production windows-build-tools --vs2017
         - npm config set msvs_version 2017 --global
 branches:
   except:
