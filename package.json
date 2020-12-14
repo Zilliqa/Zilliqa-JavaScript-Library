@@ -14,6 +14,7 @@
     "bootstrap": "lerna bootstrap && yarn build",
     "build": "yarn build:proto && yarn build:ts",
     "build:proto": "lerna run --scope @zilliqa-js/proto build",
+    "build:web": "webpack --progress --config webpack.config.js",
     "build:ts": "tsc -b tsconfig.json",
     "bundle": "ts-node -P scripts/tsconfig.json scripts/bundle.ts umd,esm && webpack --progress --config webpack.config.js",
     "clean": "lerna clean --yes && lerna run clean && rimraf includes",

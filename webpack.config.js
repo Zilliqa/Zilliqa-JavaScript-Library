@@ -6,6 +6,12 @@ module.exports = {
 
   // bundling mode
   mode: 'production',
+  target: 'web',
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+  },
 
   // entry files
   entry: {
