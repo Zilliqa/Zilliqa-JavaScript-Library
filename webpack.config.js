@@ -8,17 +8,41 @@ module.exports = {
   mode: 'production',
 
   // entry files
-  entry: './scripts/build-dist',
+  entry: {
+    zilliqa: path.resolve(__dirname, 'packages/zilliqa/src/index.ts'),
+  },
 
   // output bundles (location)
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: 'zilliqa.js',
   },
 
   // file resolutions
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '@zilliqa-js/core': path.resolve(
+        __dirname,
+        'packages/zilliqa-js-core/src/index.ts',
+      ),
+      '@zilliqa-js/account': path.resolve(
+        __dirname,
+        'packages/zilliqa-js-account/src/index.ts',
+      ),
+      '@zilliqa-js/blockchain': path.resolve(
+        __dirname,
+        'packages/zilliqa-js-blockchain/src/index.ts',
+      ),
+      '@zilliqa-js/contract': path.resolve(
+        __dirname,
+        'packages/zilliqa-js-contract/src/index.ts',
+      ),
+      '@zilliqa-js/subscriptions': path.resolve(
+        __dirname,
+        'packages/zilliqa-js-subscriptions/src/index.ts',
+      ),
+    },
   },
 
   // loaders
