@@ -48,6 +48,10 @@ module.exports = {
         __dirname,
         'packages/zilliqa-js-subscriptions/src/index.ts',
       ),
+      '@zilliqa-js/crypto': path.resolve(
+        __dirname,
+        'packages/zilliqa-js-crypto/src/index.ts',
+      ),
     },
   },
 
