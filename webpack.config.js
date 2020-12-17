@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   // generate source maps
@@ -21,7 +22,9 @@ module.exports = {
   // output bundles (location)
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'zilliqa.js',
+    filename: '[name].min.js',
+    library: 'Zilliqa',
+    libraryTarget: 'umd',
   },
 
   // file resolutions
@@ -53,6 +56,7 @@ module.exports = {
         'packages/zilliqa-js-crypto/src/index.ts',
       ),
     },
+    modules: ['node_modules'],
   },
 
   // loaders
@@ -72,7 +76,11 @@ module.exports = {
   },
 
   // plugins
-  plugins: [],
+  plugins: [
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[file].map',
+    }),
+  ],
 
   // set watch mode to `true`
   watch: false,
